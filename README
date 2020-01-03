@@ -1,2 +1,34 @@
 Proyecto asignatura PSC
+=======================
+
+Servidor http funcionando en puerto 8080
+----------------------------------------
+	/home/mmata/proyecto_psc/servidorREST
+	[mmata@nodeyc servidorREST]$ node mainServidorREST.js
+	Salida:
+		servidor REST escuchando en el puerto 8080 
+		 * GET /persona 
+
+Base de datos funcionando en:
+-----------------------------
+	/home/mmata/proyecto_psc/bd
+	[mmata@nodeyc bd]$ sqlite3 datos.bd
+	Salida:
+	SQLite version 3.7.17 2013-05-20 00:56:22
+	Enter ".help" for instructions
+	Enter SQL statements terminated with a ";"
+	sqlite> .tables
+	Asignatura  Matricula   Persona   
+	sqlite> 
+
+
+cliente rest escrito en java en:
+--------------------------------
+	/home/mmata/proyecto_psc/cliente_java
+	Para compilar: $compilar_java.sh
+	Para ejecutar: $ejecutar_java.sh
+        Salida: 
+	[mmata@nodeyc cliente_java]$ ./ejecutar_java.sh
+	{"dni":"24333469K","nombre":"Manuel","apellidos":"Mata Llorca"}
+
 
