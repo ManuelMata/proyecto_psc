@@ -6,6 +6,11 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+
+//
+// Clase para consultar si existe un dni en la tabla Persona de la Base de Datos
+//
+
 public class cliente {
  public static void main(String[] args) throws ClientProtocolException, IOException {
   HttpClient client = new DefaultHttpClient();

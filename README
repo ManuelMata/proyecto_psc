@@ -22,8 +22,8 @@ Base de datos funcionando en:
 	sqlite> 
 
 
-cliente rest escrito en java en:
---------------------------------
+cliente rest escrito en java para consultar la base de datos en:
+---------------------------------------------------------------
 	/home/mmata/proyecto_psc/cliente_java
 	Para compilar: $compilar_java.sh
 	Para ejecutar: $ejecutar_java.sh
@@ -31,4 +31,35 @@ cliente rest escrito en java en:
 	[mmata@nodeyc cliente_java]$ ./ejecutar_java.sh
 	{"dni":"24333469K","nombre":"Manuel","apellidos":"Mata Llorca"}
 
+
+
+cliente rest escrito en java para dar de alta una persona en:
+------------------------------------------------------------
+        Nota: 	El alta no funciona correctamente
+		Al servidor le llega la petición POST correctamente
+		pero el servidor no lee correctamente el contenido del BODY
+		
+	/home/mmata/proyecto_psc/cliente_java
+	Para compilar: $compilar_cliente_alta.sh
+	Para ejecutar: $ejecutar_cliente_alta.sh
+
+	Salida del programa cliente:
+		[mmata@nodeyc cliente_java]$ ./ejecutar_cliente_alta.sh
+		{
+		"dni": "99999999X",
+    		"nombre": "Luis",
+    		"apellidos": "Mayorgas"
+		}
+		POST Response Code :  400
+		POST Response Message : Bad Request
+		ERROR AL EJECUTAR LA OPERACION POST
+	Salida del programa en el servidor:
+		servidor REST escuchando en el puerto 8080 
+ 		* POST /alta 
+		req.body: 
+		{
+		"dni": "99999999X",
+    		"nombre": "Luis",
+    		"apellidos": "Mayorgas"
+		}
 

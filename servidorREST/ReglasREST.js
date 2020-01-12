@@ -45,6 +45,7 @@ module.exports.cargar = function( servidorExpress, laLogica ) {
 	servidorExpress.post(
 		'/alta/', async function(req, res, next) {
 		console.log( " * POST /alta ")
+		console.log( "req.body:",req.body)
     		var errors=[]
     		if (!req.body.dni){
         		errors.push("No se ha incluido el dni");
@@ -60,9 +61,9 @@ module.exports.cargar = function( servidorExpress, laLogica ) {
         		return;
     		}
 
-		var dni = req.params.dni
-		var nombre = req.params.nombre
-		var apellidos = req.params.apellidos
+		var dni = req.body.dni
+		var nombre = req.body.nombre
+		var apellidos = req.body.apellidos
 
 		var res = await laLogica.insertarPersona(dni,nombre,apellidos)
 
